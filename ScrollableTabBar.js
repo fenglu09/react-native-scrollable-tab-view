@@ -137,8 +137,10 @@ const ScrollableTabBar = createReactClass({
       onPress={() => onPressHandler(page)}
       onLayout={onLayoutHandler}
     >
-      <View style={[styles.tab, this.props.tabStyle, ]}>
-        <Text style={[{color: textColor, fontWeight, }, textStyle, ]}>
+      <View style={[styles.tab, this.props.tabStyle,]}>
+        <Text
+          allowFontScaling={false}
+          style={[{ color: textColor, fontWeight, }, textStyle,]}>
           {name}
         </Text>
       </View>
